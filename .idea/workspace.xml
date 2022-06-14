@@ -32,7 +32,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/icons" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -42,6 +42,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/icons" />
       <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
@@ -57,7 +58,10 @@
       <workItem from="1655198835127" duration="154000" />
       <workItem from="1655199026544" duration="2513000" />
       <workItem from="1655204355782" duration="2012000" />
-      <workItem from="1655206448820" duration="1816000" />
+      <workItem from="1655206448820" duration="2322000" />
+      <workItem from="1655209138867" duration="4345000" />
+      <workItem from="1655220021365" duration="884000" />
+      <workItem from="1655225724709" duration="1198000" />
     </task>
     <servers />
   </component>

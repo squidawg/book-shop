@@ -1,5 +1,42 @@
 .cart{
     display: flex;
+    flex-direction: column;
+}
+
+.cart_inner{
     background: #F6F6F6;
     width: 450px;
+    height: 100%;
+}
+
+.cart_title{
+    text-align: center;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45.5px;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.border_box{
+    margin: 20px;
+    border: dashed 5px #C4C4C4;
+    height: 1380px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.drag-n-drop{
+    width: 120px;
+    height: 120px;
+    color: #545454;
+    background-image: url("/icons/drag-drop-svgrepo-com.svg");
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    fill: #C4C4C4;
+    margin-top: 50%;
 }

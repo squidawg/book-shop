@@ -10,9 +10,7 @@
 
 }
 
-.inner_wrapper{
- margin: 20px;
-}
+
 
 .button{
     font-family: 'Georgia', sans-serif;
@@ -30,6 +28,11 @@
 
 }
 
+button.button:hover{
+    background: #FDDCC4;
+    transition: all .3s ease-out;
+}
+
 .button_expand{
     font-family: 'Georgia', sans-serif;
     font-style: normal;
@@ -42,4 +45,8 @@
     cursor: pointer;
     color: #292929;
     border: none;
+}
+button.button_expand:hover{
+    background: #FDDCC4;
+    transition: all .3s ease-out;
 }
