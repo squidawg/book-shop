@@ -1,0 +1,17 @@
+.button_expand{
+    width: 20px;
+    height: 20px;
+    background-image: url("/icons/icon.svg");
+    border-radius: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.card_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 120px;
+}

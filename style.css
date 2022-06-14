@@ -1,0 +1,11 @@
+@import "shelf.css";
+@import "card.css";
+@import "cart.css";
+
+.wrapper{
+    width: 1270px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+}
