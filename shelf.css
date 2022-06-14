@@ -19,16 +19,3 @@
 
 }
 
-.card{
-    display: flex;
-    flex-wrap: wrap;
-    width: 350px;
-    background: #F6F6F6;
-    border-radius: 9px;
-
-}
-.card_inner{
-    display: flex;
-    flex-direction: column;
-    width: 220px;
-}

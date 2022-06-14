@@ -1,6 +1,6 @@
 const WRAPPER = document.querySelector('.wrapper')
-const SHELF = createElement('div', 'shelf' );
-const CART = createElement('div', 'cart');
+const SHELF = createElement('div', 'shelf' , 'inner_wrapper');
+const CART = createElement('div', 'cart', 'inner_wrapper');
 WRAPPER.append(SHELF, CART);
 let books;
 
@@ -11,9 +11,9 @@ async function readJSON() {
     books = json;
 }
 
-function createElement(tag, classList) {
+function createElement(tag, ...classList) {
     const element = document.createElement(tag);
-    element.classList.add(classList);
+    element.classList.add(...classList);
     return element;
 }
 
@@ -37,6 +37,7 @@ const createCardTemplate = (name, link, book_name, book_price, book_description)
     const card = createElement('div', 'card')
     const card_inner = createElement('div', 'card_inner')
     const buttons = createElement('div', 'card_buttons')
+    const card_inner_wrapper = createElement("div", "card_inner_wrapper")
 
     const img = createElement("img", "book_image");
     img.src = link;
@@ -48,7 +49,7 @@ const createCardTemplate = (name, link, book_name, book_price, book_description)
     title.innerText = book_name;
 
     const price = createElement('h4', "book_price");
-    price.innerText = `Price: ${book_price}`;
+    price.innerText = `Price: $${book_price}`;
 
 
     const btn = createElement("button", "button");
@@ -58,7 +59,8 @@ const createCardTemplate = (name, link, book_name, book_price, book_description)
 
     buttons.append(expand, btn)
     card_inner.append(title, author, price)
-    card.append(img, card_inner, buttons)
+    card_inner_wrapper.append(img, card_inner)
+    card.append(card_inner_wrapper, buttons)
 
     return card;
 

@@ -1,11 +1,45 @@
 @import "shelf.css";
 @import "card.css";
 @import "cart.css";
-
+@import "placeholder.css";
 .wrapper{
     width: 1270px;
     margin: auto;
     display: flex;
     flex-direction: row;
 
+}
+
+.inner_wrapper{
+ margin: 20px;
+}
+
+.button{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    border-radius: 100px;
+    cursor: pointer;
+    background: #F1CDB3;
+    color: #292929;
+    padding: 5px 10px 5px 10px;
+    border: none;
+
+}
+
+.button_expand{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    padding: 15px;
+    border-radius: 100px;
+    cursor: pointer;
+    color: #292929;
+    border: none;
 }
