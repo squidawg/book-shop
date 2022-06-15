@@ -26,10 +26,7 @@ async function readJSON() {
 function header(){
     const header_inner = createElement('div', 'header_inner');
     const header_promo = createElement('img',"header_promo" );
-    header_promo.src = 'images/pexels-karolina-grabowska-4977470.jpeg'
     const header_button = createElement('button', "header_button");
-    header_inner.append(header_promo);
-    //HEADER.append(header_inner)
 
 }
 function cart(){
@@ -83,10 +80,8 @@ const createCardTemplate = (name, link, book_name, book_price, book_description)
     const img = createElement("img", "book_image");
     img.src = link;
 
-
     const author = createElement("h4", "book_author");
     author.innerText = name;
-
 
     const title = createElement("h4", "book_title");
     title.innerText = book_name;
@@ -116,7 +111,6 @@ async function init(){
     await readJSON();
     generateCardAppend();
     cart();
-    header();
 }
 
 init();

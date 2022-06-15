@@ -41,7 +41,8 @@
 .drag-n-drop{
     width: 120px;
     height: 120px;
-    background-image: url("/icons/drag-drop.svg");
+    color: #545454;
+    background-image: url("/icons/drag-drop-svgrepo-com.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
