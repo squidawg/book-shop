@@ -10,11 +10,18 @@ const CART = createElement('div', 'cart', 'inner_wrapper');
 const CART_INNER = createElement('div', "cart_inner");
 const CART_TITLE = createElement('div','cart_wrapper');
 
-const HEADER = createElement('header', 'header');
+
+const cart_title = createElement('h2', 'cart_title');
+cart_title.innerText = 'Cart';
 
 
-const FOOTER = createElement('footer', 'footer');
-
+const BORDER_BOX = createElement('div', "border_box");
+const drag = createElement('span', 'drag-n-drop');
+BORDER_BOX.append(drag)
+CART_TITLE.append(cart_title);
+CART_INNER.append(BORDER_BOX);
+CART.append(CART_TITLE, CART_INNER);
+WRAPPER.append(SHELF, CART);
 let books;
 
 
@@ -22,27 +29,6 @@ async function readJSON() {
     const response = await fetch("book.json");
     const json = await response.json();
     books = json;
-}
-function header(){
-    const header_inner = createElement('div', 'header_inner');
-    const header_promo = createElement('img',"header_promo" );
-    const header_button = createElement('button', "header_button");
-
-}
-function cart(){
-    const cart_title = createElement('h2', 'cart_title');
-    cart_title.innerText = 'Cart';
-    const BORDER_BOX = createElement('div', "border_box");
-    const border_inner = createElement('div', 'border_inner');
-    const drag_title = createElement('h2', 'drag_title');
-    drag_title.innerText = "Drag n drop"
-    const drag = createElement('svg', 'drag-n-drop');
-
-    border_inner.append(drag_title,drag)
-    BORDER_BOX.append(border_inner)
-    CART_TITLE.append(cart_title);
-    CART_INNER.append(BORDER_BOX);
-
 }
 
 
@@ -104,13 +90,11 @@ const createCardTemplate = (name, link, book_name, book_price, book_description)
 
 }
 
-CART.append(CART_TITLE, CART_INNER);
-WRAPPER.append(HEADER,SHELF, CART, FOOTER);
 
 async function init(){
     await readJSON();
     generateCardAppend();
-    cart();
 }
+
 
 init();
