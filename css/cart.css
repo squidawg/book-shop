@@ -29,14 +29,33 @@
 
 }
 
+.border_inner{
+    max-width: 135px;
+    height: 120px;
+    margin-top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .drag-n-drop{
     width: 120px;
     height: 120px;
     color: #545454;
     background-image: url("/icons/drag-drop-svgrepo-com.svg");
-    display: inline-flex;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 50%;
     fill: #C4C4C4;
-    margin-top: 50%;
+    display: inline-flex;
+}
+
+.drag_title{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    margin: 0;
 }

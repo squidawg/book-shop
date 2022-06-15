@@ -1,7 +1,11 @@
-@import "shelf.css";
-@import "card.css";
-@import "cart.css";
-@import "placeholder.css";
+@import "/css/shelf.css";
+@import "/css/header.css";
+@import "/css/footer.css";
+@import "/css/card.css";
+@import "/css/cart.css";
+@import "/css/text.css";
+
+
 .wrapper{
     width: 1270px;
     margin: auto;
