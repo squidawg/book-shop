@@ -2,11 +2,18 @@
 @import "card.css";
 @import "cart.css";
 @import "placeholder.css";
+@import "header.css";
+@import "footer.css";
+
+.body{
+    margin: 0;
+}
 .wrapper{
     width: 1270px;
     margin: auto;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
 }
 
@@ -21,7 +28,7 @@
     letter-spacing: 0.06em;
     border-radius: 100px;
     cursor: pointer;
-    background: #F1CDB3;
+    background: #C5E5A5;
     color: #292929;
     padding: 5px 10px 5px 10px;
     border: none;
@@ -29,7 +36,7 @@
 }
 
 button.button:hover{
-    background: #FDDCC4;
+    background: #98B66E;
     transition: all .3s ease-out;
 }
 
@@ -47,6 +54,29 @@ button.button:hover{
     border: none;
 }
 button.button_expand:hover{
-    background: #FDDCC4;
+    background: #98B66E;
     transition: all .3s ease-out;
+}
+
+.button_promo{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    border-radius: 9px;
+    cursor: pointer;
+    background: #F9D876;
+    color: #292929;
+    padding: 10px 15px 10px 15px;
+    border: 3px solid;
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+button.button_promo:hover{
+    background: #98B66E;
+    transition: all .3s ease-out;
+    border: 3px solid #98B66E;
 }

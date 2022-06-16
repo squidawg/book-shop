@@ -37,6 +37,25 @@
     display: inline-flex;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 50%;
     fill: #C4C4C4;
+
+}
+
+.border_inner{
+    display: flex;
+    flex-direction: column;
     margin-top: 50%;
+    align-items: center;
+}
+
+.border_title{
+    margin: 0;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    color: #545454;
 }
