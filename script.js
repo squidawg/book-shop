@@ -8,6 +8,7 @@ const FOOTER = createElement('footer', 'footer');
 
 
 const SHELF = createElement('div', 'shelf' , 'inner_wrapper');
+SHELF.id = "shelf"
 const SHELF_INNER = createElement('div', "shelf_inner" );
 const SHELF_TITLE = createElement('div', "shelf_title" );
 
@@ -68,6 +69,12 @@ function header(){
     const  header_inner = createElement('div', 'wrapper');
     const button_promo = createElement('button', 'button_promo');
     button_promo.innerText = "To catalog"
+    button_promo.onclick = function () {
+        document.getElementById('shelf').scrollIntoView({
+            behavior: 'smooth'
+        });
+    };
+
 
     header_title.innerText = 'Book shop'
     header_description.innerText = 'Connecting readers with independent booksellers all over the world.'
