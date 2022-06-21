@@ -4,6 +4,7 @@
 @import "placeholder.css";
 @import "header.css";
 @import "footer.css";
+@import "modal.css";
 
 .body{
     margin: 0;
@@ -84,59 +85,3 @@ button.button_promo:hover{
 }
 
 
-
-/* modal */
-
-.tools-modal{
-    width: 400px;
-    height: 400px;
-}
-
-
-.overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(41, 41, 41, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.modal__wrapper {
-    position: relative;
-    width: 952px;
-    height: 552px;
-    overflow: auto;
-}
-
-.modal {
-    margin-top: 52px;
-    border-radius: 9px;
-    background-color: #FAFAFA;
-    width: 900px;
-    height: 500px;
-    overflow: auto;
-    overflow-x: hidden;
-}
-
-.wrapper-modal-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.modal-content__image{
-    width: 381px;
-    height: 500px;
-}
-
-.wrapper-modal-content__inner-modal{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 15px;
-}

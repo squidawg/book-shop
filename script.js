@@ -66,23 +66,24 @@ const createModalContent = (name, link, book_name, book_price, book_description)
 
     const wrapper__modal = createElement("div", 'wrapper-modal-content');
     const wrapper__inner__modal = createElement("div", 'wrapper-modal-content__inner-modal');
+    const header = createElement('div', 'modal__header')
 
     const img = document.createElement("img");
     img.src =  link;
     img.classList.add("modal-content__image");
 
 
-    const title = createElement("h2", 'book_title');
+    const title = createElement("h2", 'modal__title');
     title.innerText = book_name;
-    const author = createElement('h3', 'book_author');
+    const author = createElement('h3', 'modal__author');
     author.innerText = name;
-    const description = createElement("p", 'book_author');
+    const description = createElement("p", 'modal__description');
     description.innerText = book_description;
     const price = createElement('h2', 'modal-content__price');
     price.innerText = book_price;
 
-
-    wrapper__inner__modal.append(title, author, description);
+    header.append(title, author)
+    wrapper__inner__modal.append(header, description);
     wrapper__modal.append(img, wrapper__inner__modal);
 
     return wrapper__modal;
