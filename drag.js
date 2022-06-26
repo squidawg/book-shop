@@ -1,5 +1,6 @@
 const box = document.querySelector('.border_box');
 const box_inner = document.querySelector('.border_inner');
+
 let start = '';
 let arr = [];
 window.addEventListener('load', (event) => {
@@ -26,7 +27,10 @@ window.addEventListener('load', (event) => {
 
     function dragStart() {
         console.log('start');
-        box.className += ' active';
+        if(!box.classList.contains('active')){
+            box.className += ' active';
+        }
+
         start = this;
 
 
@@ -41,29 +45,40 @@ window.addEventListener('load', (event) => {
 
     function dragDrop() {
         let clone = start.cloneNode(true);
+        let img = clone.firstChild.childNodes[0];
+        let title = clone.firstChild.lastChild.childNodes[0]
+        let author =  clone.firstChild.lastChild.childNodes[1]
+        let price =  clone.firstChild.lastChild.childNodes[2]
 
-        box.className += ' drop_area';
+        if(!box.classList.contains('drop_area')){
+            box.className += ' drop_area';
+        }
+
         box_inner.style.display = "none";
         let test = arr.some(element => element.id === clone.id)
         if(!test){
-            arr.push(clone)
-            box.append(clone);
+            arr.push(cartTemplate(img, title, author, price, clone.id))
+            box.append(cartTemplate(img, title, author, price, clone.id));
         }
-
-
-
-
-
-
-
-
-
-
+        console.log(img)
 
     }
 
-    function cartCard(img, title, author, price){
+    function cartTemplate(img, title, author, price, id) {
+        const card = createElement('div', 'card');
+        card.id = id
+        const card_inner = createElement('div', 'card_inner');
+        const card_inner_wrapper = createElement("div", "card_inner_wrapper");
+
+
+        card_inner.append(title, author, price);
+        card_inner_wrapper.append(img, card_inner);
+        card.append(card_inner_wrapper);
+
+        return card;
     }
+
+
 
 
 
