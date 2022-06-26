@@ -5,6 +5,8 @@
 @import "header.css";
 @import "footer.css";
 @import "modal.css";
+@import "drag.css";
+
 
 .body{
     margin: 0;
@@ -53,10 +55,16 @@ button.button:hover{
     cursor: pointer;
     color: #292929;
     border: none;
+    background-image: url("icons/icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 button.button_expand:hover{
     background: #98B66E;
     transition: all .3s ease-out;
+    background-image: url("icons/icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .button_promo{

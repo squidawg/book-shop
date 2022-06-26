@@ -1,4 +1,3 @@
-
 const WRAPPER = document.querySelector('.wrapper');
 const BODY = document.querySelector('body');
 
@@ -25,6 +24,7 @@ cart_title.innerText = 'Cart';
 
 
 const BORDER_BOX = createElement('div', "border_box");
+BORDER_BOX.id = 'border_box'
 const border_inner = createElement('div', "border_inner");
 
 
@@ -33,6 +33,7 @@ border_title.innerText = "Drop here";
 
 
 const drag = createElement('span', 'drag-n-drop');
+
 
 
 border_inner.append(border_title, drag)
@@ -51,6 +52,8 @@ async function readJSON() {
     const json = await response.json();
     books = json;
 }
+
+
 const renderModalWindow = (content) => {
     let modal = new Modal('tools-modal');
     modal.buildModal(content)
@@ -82,12 +85,15 @@ const createModalContent = (name, link, book_name, book_price, book_description)
     const price = createElement('h2', 'modal-content__price');
     price.innerText = book_price;
 
+
     header.append(title, author)
     wrapper__inner__modal.append(header, description);
     wrapper__modal.append(img, wrapper__inner__modal);
 
+
     return wrapper__modal;
 }
+
 
 function footer(){
     const footer_inner = createElement('div', 'footer_inner');
@@ -190,6 +196,7 @@ const createCardTemplate = (name, link, book_name, book_price, book_description)
     return card;
 
 }
+
 
 
 async function init(){
