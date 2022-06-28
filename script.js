@@ -149,6 +149,7 @@ function generateCardAppend() {
         let price = books[i].price;
         let description = books[i].description;
 
+
         let card = createCardTemplate(name, img, title, price, description);
         card.draggable = 'true';
         SHELF_INNER.appendChild(card);

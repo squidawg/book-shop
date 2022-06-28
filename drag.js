@@ -55,28 +55,36 @@ window.addEventListener('load', (event) => {
         }
 
         box_inner.style.display = "none";
-        let test = arr.some(element => element.id === clone.id)
+        let test = arr.some(element => element.id === clone.id);
         if(!test){
-            arr.push(cartTemplate(img, title, author, price, clone.id))
-            box.append(cartTemplate(img, title, author, price, clone.id));
+            arr.push(cartTemplate(img, title, author, price, clone.id ));
+            box.append(cartTemplate(img, title, author, price, clone.id ));
         }
-        console.log(img)
 
     }
 
+
     function cartTemplate(img, title, author, price, id) {
         const card = createElement('div', 'card');
-        card.id = id
+        card.id = id;
         const card_inner = createElement('div', 'card_inner');
         const card_inner_wrapper = createElement("div", "card_inner_wrapper");
+        const remove =  createElement('button', "button_remove");
+        remove.id = id;
+        remove.addEventListener('click',function(elem) {
+            elem.target.parentElement.remove();
+            arr.map(element => elem.target.id === element.id? arr.splice(arr.indexOf(element), 1):false);
+        });
+
 
 
         card_inner.append(title, author, price);
         card_inner_wrapper.append(img, card_inner);
-        card.append(card_inner_wrapper);
+        card.append(card_inner_wrapper, remove);
 
         return card;
     }
+
 
 
 

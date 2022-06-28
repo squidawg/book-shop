@@ -93,3 +93,30 @@ button.button_promo:hover{
 }
 
 
+.button_remove{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    padding: 15px;
+    border-radius: 100px;
+    cursor: pointer;
+    color: #292929;
+    border: none;
+    transform: rotate(45deg);
+    background-image: url("icons/icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 20px;
+    height: 20px;
+}
+button.button_remove:hover{
+    background: #E74536;
+    transition: all .3s ease-out;
+    background-image: url("icons/icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
