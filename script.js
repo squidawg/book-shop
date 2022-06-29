@@ -1,3 +1,4 @@
+
 const WRAPPER = document.querySelector('.wrapper');
 const BODY = document.querySelector('body');
 
@@ -107,6 +108,7 @@ function footer(){
     FOOTER.append(footer_inner);
 
 }
+
 function header(){
     const header_promo = createElement('img', "header_promo");
     const header_wrapper = createElement('div' ,'header_wrapper');
@@ -184,6 +186,9 @@ const createCardTemplate = (name, link, book_name, book_price, book_description)
 
 
 
+
+
+
     const expand = createElement('button', "button_expand");
     expand.addEventListener("click", () =>
         generateToolsModal(name, link, book_name, book_price, book_description));
@@ -206,6 +211,5 @@ async function init(){
     header();
     footer();
 }
-
 
 init();
