@@ -1,0 +1,41 @@
+.total_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px 10px 20px;
+    background-color: #bed7b8;
+    border-radius: 30px;
+}
+
+.total_count{
+    margin: 0;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    color: #292929;
+    margin-right: 5px;
+}
+
+.total_name{
+    margin: 0;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    margin-left: 5px;
+}
+
+.total_inner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #C5E5A5;
+    border-radius: 100px;
+    padding: 4px;
+}

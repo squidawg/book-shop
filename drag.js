@@ -1,29 +1,36 @@
 const box = document.querySelector('.border_box');
 const box_inner = document.querySelector('.border_inner');
+const cart_inner = document.querySelector('.cart_inner');
 
 let start = '';
 let access = '';
 let arr = [];
-let cloner = '';
+let data = '';
+let result = 0;
 
 window.addEventListener('load', () => {
         const cards = document.querySelectorAll('.card');
+        box.addEventListener('drop', dragDrop);
+        box.addEventListener('dragover', dragOver);
+
         cards.forEach(function (element) {
             element.addEventListener('dragstart', dragStart);
             element.childNodes[1].lastChild.addEventListener('click', function (){
                 access = this;
                 start = document.getElementById(access.closest('.card').id)
-                cloner = start.cloneNode(true);
+                data = start.cloneNode(true);
             })
-            element.childNodes[1].lastChild.addEventListener('click', function (start){
-                 let id = cloner.id
-                 let img = cloner.childNodes[0].firstChild;
-                 let title = cloner.childNodes[0].lastChild.firstChild;
-                 let author = cloner.childNodes[0].lastChild.childNodes[1];
-                 let price = cloner.childNodes[0].lastChild.lastChild;
+            element.childNodes[1].lastChild.addEventListener('click', function (){
+                 let id = data.id
+                 let img = data.childNodes[0].firstChild;
+                 let title = data.childNodes[0].lastChild.firstChild;
+                 let author = data.childNodes[0].lastChild.childNodes[1];
+                 let price = data.childNodes[0].lastChild.lastChild;
+                 getData(data)
 
                    if (!box.classList.contains('drop_area')) {
                        box.className += ' drop_area';
+                       cartTotal(result)
                    }
 
 
@@ -31,12 +38,15 @@ window.addEventListener('load', () => {
                    let test = arr.some(element => element.id === id);
                      if (!test) {
                        cartPush(img, title, author, price, id);
+                       result += +price.innerHTML.replace(/\D/g, "");
+                       updateCart(result);
+
+
                    }
 
 
             })
         });
-
 
 
         const card_id = document.querySelectorAll('.card');
@@ -46,9 +56,6 @@ window.addEventListener('load', () => {
             i++;
         });
 
-        box.addEventListener('drop', dragDrop);
-        box.addEventListener('dragover', dragOver);
-
 
 
         function dragStart() {
@@ -56,10 +63,7 @@ window.addEventListener('load', () => {
                 box.className += ' active';
             }
             start = this;
-
-
         }
-
 
         function dragOver(e) {
             e.preventDefault();
@@ -81,10 +85,13 @@ window.addEventListener('load', () => {
             let test = arr.some(element => element.id === clone.id);
             if (!test) {
                 cartPush(img, title, author, price, clone.id);
+                result += +price.innerHTML.replace(/\D/g, "");
+                updateCart(result);
+
+
             }
 
         }
-
 
 
         function cartTemplate(img, title, author, price, id) {
@@ -95,11 +102,16 @@ window.addEventListener('load', () => {
             const remove = createElement('button', "button_remove");
             remove.id = id;
             remove.addEventListener('click', function (elem) {
+                let cost = elem.target.previousElementSibling.lastChild.lastChild;
+                result -= +cost.innerHTML.replace(/\D/g, "");
+                updateCart(result);
                 elem.target.parentElement.remove();
                 arr.map(element => elem.target.id === element.id ? arr.splice(arr.indexOf(element), 1) : false);
+
                 if(box.childNodes.length === 1){
                     box.className = 'border_box';
                     box_inner.style.display = "flex";
+
 
                 }
             });
@@ -112,10 +124,48 @@ window.addEventListener('load', () => {
             return card;
         }
 
+
         function cartPush(img, title, author, price, clone) {
             arr.push(cartTemplate(img, title, author, price, clone));
             box.append(cartTemplate(img, title, author, price, clone));
 
+        }
+
+
+        function cartTotal(price) {
+            const totalWrapper = createElement('div', 'total_wrapper');
+            const innerWrapper = createElement('div', 'total_inner');
+
+            const totalCount = createElement('h2', 'total_count');
+            const totalCheckout = createElement('button', 'button');
+            const totalName = createElement('h2', 'total_name');
+
+            totalName.innerHTML = 'total $'
+            totalCheckout.innerHTML = 'Checkout'
+            totalCount.innerText += price
+
+            innerWrapper.append(totalName, totalCount,)
+            totalWrapper.append(innerWrapper, totalCheckout)
+            cart_inner.append(totalWrapper)
+        }
+
+        function updateCart(price){
+            let total = document.querySelector('.total_count');
+            total.innerHTML = price
+            if(total.innerHTML < 1){
+                total.parentElement.remove()
+            }
+
+        }
+        function getData(elem){
+            let arr = []
+            let id = elem.id
+            let img = elem.childNodes[0].firstChild;
+            let title = elem.childNodes[0].lastChild.firstChild;
+            let author = elem.childNodes[0].lastChild.childNodes[1];
+            let price = elem.childNodes[0].lastChild.lastChild;
+            arr.push(img, title, author, price, id);
+            return arr
         }
     }
 );
