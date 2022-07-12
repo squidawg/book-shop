@@ -39,3 +39,161 @@
     border-radius: 100px;
     padding: 4px;
 }
+
+.checkout{
+    background-color: #F9D876;
+}
+
+.payment_wrapper{
+    width: 600px;
+    height: 600px;
+    background-color: #F6F6F6;
+    border-radius: 9px;
+}
+
+.payment_inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.payment_logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.delivery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+    background-image: url("/icons/Credit card_light.svg");
+    display: inline-flex;
+    border-radius: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cart_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input_element{
+    display: flex;
+    flex-direction: column;
+}
+
+.button_cancel{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    border-radius: 100px;
+    cursor: pointer;
+    background: #C5E5A5;
+    color: #292929;
+    padding: 5px 10px 5px 10px;
+    border: none;
+}
+
+.button_submit{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    border-radius: 100px;
+    cursor: pointer;
+    background: #C5E5A5;
+    color: #292929;
+    padding: 5px 10px 5px 10px;
+    border: none;
+}
+
+.button_text{
+    margin: 0;
+}
+
+button.button_submit:hover{
+    background: #98B66E;
+    transition: all .3s ease-out;
+}
+
+button.button_submit:disabled{
+    background: #98B66E;
+}
+
+button.button_cancel:hover{
+    background: #98B66E;
+    transition: all .3s ease-out;
+}
+
+input:invalid:required {
+    background-color: #98B66E;
+}
+.inner_delivery{
+
+}
+.text_form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+
+.gift{
+    display: flex;
+    flex-direction: column;
+}
+
+.validate{
+    width: 150px;
+    height: 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: #C5E5A5;
+    border-radius: 9px;
+    border: none;
+}
+
+label{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+}
+
+.inner_element{
+    display: flex;
+    flex-direction: row;
+}
+
+.subtitle{
+    margin: 15px 0 5px 0;
+}
+
+.payment_option{
+
+}
+
+.options{
+    display: flex;
+    justify-content: space-around;
+}
+.buttons{
+    display: flex;
+    gap: 5px;
+    justify-content: end;
+    margin-right: 50px;
+}

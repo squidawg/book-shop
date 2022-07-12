@@ -1,3 +1,5 @@
+
+
 class Modal {
     constructor(classes) {
         this.classes = classes;
@@ -49,7 +51,7 @@ class Modal {
     }
 
     appendModalElements() {
-        this.modalCloseBtn.append(this.CloseBtnInner)
+        this.modalCloseBtn.append(this.CloseBtnInner);
         this.modal.append(this.modalContent, this.modalCloseBtn);
         this.modalWrapper.appendChild(this.modal);
         this.overlay.appendChild(this.modalWrapper);

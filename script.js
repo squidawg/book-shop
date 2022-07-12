@@ -17,7 +17,7 @@ const SHELF_TITLE = createElement('div', "shelf_title" );
 
 const CART = createElement('div', 'cart', 'inner_wrapper');
 const CART_INNER = createElement('div', "cart_inner");
-const CART_TITLE = createElement('div','cart_wrapper');
+const CART_WRAPPER = createElement('div','cart_wrapper');
 
 
 const cart_title = createElement('h2', 'cart_title');
@@ -36,12 +36,11 @@ border_title.innerText = "Drop here";
 const drag = createElement('span', 'drag-n-drop');
 
 
-
 border_inner.append(border_title, drag)
 BORDER_BOX.append(border_inner)
-CART_TITLE.append(cart_title);
+CART_WRAPPER.append(cart_title);
 CART_INNER.append(BORDER_BOX);
-CART.append(CART_TITLE, CART_INNER);
+CART.append(CART_WRAPPER, CART_INNER);
 WRAPPER.append(SHELF, CART);
 BODY.append(HEADER, WRAPPER, FOOTER)
 let books;
@@ -184,11 +183,6 @@ const createCardTemplate = (name, link, book_name, book_price, book_description)
     const btn = createElement("button", "button");
     btn.innerText = "Add to cart";
 
-
-
-
-
-
     const expand = createElement('button', "button_expand");
     expand.addEventListener("click", () =>
         generateToolsModal(name, link, book_name, book_price, book_description));
@@ -205,6 +199,8 @@ const createCardTemplate = (name, link, book_name, book_price, book_description)
 
 
 
+
+
 async function init(){
     await readJSON();
     generateCardAppend();
@@ -212,4 +208,4 @@ async function init(){
     footer();
 }
 
-init();
+init()
