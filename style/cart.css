@@ -6,7 +6,7 @@
 .cart_inner{
     background: #F6F6F6;
     width: 450px;
-    /*height: 100%;*/
+    margin-top: 20px;
 }
 
 .cart_title{
@@ -25,6 +25,8 @@
     border: dashed 5px #C4C4C4;
     display: flex;
     justify-content: center;
+    max-height: 1300px;
+    overflow: scroll;
 
 }
 

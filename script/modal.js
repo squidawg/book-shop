@@ -1,6 +1,4 @@
-
-
-class Modal {
+export class Modal {
     constructor(classes) {
         this.classes = classes;
         this.modalWrapper = '';
@@ -11,8 +9,7 @@ class Modal {
         this.CloseBtnInner = '';
     }
 
-
-    buildModal(content) {
+     buildModal(content) {
         this.overlay = this.createDomNode(this.overlay, 'div', 'overlay');
 
         this.modalWrapper = this.createDomNode(this.modalWrapper, 'div', 'modal_wrapper');
@@ -20,8 +17,6 @@ class Modal {
 
         this.modalCloseBtn = this.createDomNode(this.modalCloseBtn, 'button', 'modal_close');
         this.CloseBtnInner = this.createDomNode(this.modalCloseBtn, 'span', "modal__close-icon");
-
-
 
         this.modalContent = this.createDomNode(this.modalContent, 'div', 'modal_content');
 
@@ -34,11 +29,10 @@ class Modal {
         this.openModal();
     }
 
-
     createDomNode(node, element, ...classes) {
         node = document.createElement(element);
-        node.classList.add(...classes)
-        return node
+        node.classList.add(...classes);
+        return node;
     }
 
     setContent(content) {

@@ -30,9 +30,9 @@
     font-size: 17px;
     line-height: 22.1px;
     letter-spacing: 0.06em;
-    border-radius: 100px;
+    border-radius: 9px;
     cursor: pointer;
-    background: #C5E5A5;
+    background: #FFD25A;
     color: #292929;
     padding: 5px 10px 5px 10px;
     border: none;
@@ -40,7 +40,7 @@
 }
 
 button.button:hover{
-    background: #98B66E;
+    background: #FF785A;
     transition: all .3s ease-out;
 }
 
@@ -56,14 +56,14 @@ button.button:hover{
     cursor: pointer;
     color: #292929;
     border: none;
-    background-image: url("icons/icon.svg");
+    background-image: url("../icons/Icon.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 button.button_expand:hover{
-    background: #98B66E;
+    background: #FF785A;
     transition: all .3s ease-out;
-    background-image: url("icons/icon.svg");
+    background-image: url("../icons/Icon.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -77,7 +77,6 @@ button.button_expand:hover{
     letter-spacing: 0.06em;
     border-radius: 9px;
     cursor: pointer;
-    background: #F9D876;
     color: #292929;
     padding: 10px 15px 10px 15px;
     border: 3px solid;
@@ -87,9 +86,9 @@ button.button_expand:hover{
 }
 
 button.button_promo:hover{
-    background: #98B66E;
-    transition: all .3s ease-out;
-    border: 3px solid #98B66E;
+    background: #FF785A;
+    transition: all .2s ease-out;
+    border: 3px solid #FF785A;
     /*#98B66E*/
 }
 
@@ -107,7 +106,7 @@ button.button_promo:hover{
     color: #292929;
     border: none;
     transform: rotate(45deg);
-    background-image: url("icons/icon.svg");
+    background-image: url("../icons/Icon.svg");
     background-repeat: no-repeat;
     background-position: center;
 
@@ -115,9 +114,9 @@ button.button_promo:hover{
     height: 20px;
 }
 button.button_remove:hover{
-    background: #E74536;
+    background: #FF785A;
     transition: all .3s ease-out;
-    background-image: url("icons/icon.svg");
+    background-image: url("../icons/Icon.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
