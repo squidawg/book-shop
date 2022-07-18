@@ -13,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -31,7 +31,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/script/drag.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/script/CartController.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -131,7 +131,8 @@
       <workItem from="1657783557441" duration="657000" />
       <workItem from="1657784283711" duration="64000" />
       <workItem from="1657784581510" duration="31822000" />
-      <workItem from="1657906465880" duration="16945000" />
+      <workItem from="1657906465880" duration="21930000" />
+      <workItem from="1658151675834" duration="7239000" />
     </task>
     <servers />
   </component>

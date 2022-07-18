@@ -1,5 +1,5 @@
-import {Modal} from "./modal.js";
-export class NewModal extends Modal
+import {ExpandBtnModal} from "./ExpandBtnModal.js";
+export class ConfirmOrderModal extends ExpandBtnModal
 {
     closeModal() {}
     bindEvents() {}

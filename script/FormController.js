@@ -1,5 +1,6 @@
 import createElement from "./CreateElement.js";
-import {NewModal} from "./NewModal.js";
+import {ConfirmOrderModal} from "./ConfirmOrderModal.js";
+
 const cart_total = document.querySelector('.cart_total');
 let form = document.querySelector('form');
 const btn_submit = document.querySelector('.button_submit');
@@ -43,13 +44,26 @@ if(document.title === 'Checkout') {
         const today = new Date();
         const tomorrow = new Date();
         tomorrow.setDate(today.getDate() + 1);
-        document.getElementById('input-date').setAttribute('min', tomorrow.toISOString().split('T')[0]);
+        document.getElementById('input-date').setAttribute('min',
+            tomorrow.toISOString().split('T')[0]);
 
         const checkForm = document.getElementById('delivery');
+        checkForm.addEventListener('change', ()=>{
+            const check = document.querySelectorAll('.error');
+            check.forEach(function (element) {
+                 if(element.previousElementSibling.checkValidity()){
+                     element.style.display = 'none';
+                 }
+                 else {
+                     element.style.display = 'block';
+                 }
+            });
+        });
         checkForm.addEventListener("change", () => {
             document.getElementById('button_submit').disabled = !checkForm.checkValidity();
 
         });
+
 
         btn_submit.addEventListener('click',(e) => {
                e.preventDefault();
@@ -58,7 +72,7 @@ if(document.title === 'Checkout') {
            });
 
         const renderModalWin = (content) => {
-            let modal = new NewModal('complete-modal');
+            let modal = new ConfirmOrderModal('complete-modal');
             modal.buildModal(content);
             payment_wrapper.setAttribute("style","display:none;");
         };
@@ -90,7 +104,7 @@ if(document.title === 'Checkout') {
             const title = createElement('h2', 'title_complete');
             title.innerText = ' Your order is Confirmed!';
 
-            const closeButton = createElement('btn', 'button_complete');
+            const closeButton = createElement('btn', 'button', 'button_complete');
             const inner_button = createElement('p', 'button_text');
             inner_button.innerText = 'Complete';
             closeButton.addEventListener('click', () => {
@@ -109,4 +123,10 @@ if(document.title === 'Checkout') {
 
 
     });
+}
+
+if(document.title === 'Complete') {
+    let result = formData.get('firstName');
+    const submit_info = document.getElementById('submit');
+    submit_info.append(result);
 }

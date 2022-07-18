@@ -1,4 +1,4 @@
-export class Modal {
+export class ExpandBtnModal {
     constructor(classes) {
         this.classes = classes;
         this.modalWrapper = '';

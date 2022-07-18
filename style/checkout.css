@@ -103,56 +103,6 @@
     flex-direction: column;
 }
 
-.button_cancel{
-    font-family: 'Georgia', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 22.1px;
-    letter-spacing: 0.06em;
-    border-radius: 9px;
-    cursor: pointer;
-    background: #FFD25A;
-    color: #292929;
-    padding: 5px 10px 5px 10px;
-    border: none;
-}
-
-.button_submit{
-    font-family: 'Georgia', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 22.1px;
-    letter-spacing: 0.06em;
-    border-radius: 9px;
-    cursor: pointer;
-    background: #FFD25A;
-    color: #292929;
-    padding: 5px 10px 5px 10px;
-    border: none;
-}
-
-.button_text{
-    margin: 0;
-}
-
-button.button_submit:hover{
-    background: #FFAA5A;
-    transition: all .3s ease-out;
-}
-
-button.button_submit:disabled{
-    background: #FF785A;
-    opacity: 0.5;
-    cursor: default;
-}
-
-button.button_cancel:hover{
-    background: #FFAA5A;
-    transition: all .3s ease-out;
-}
-
 input:invalid:required {
     border: 1px solid #FF785A;
 }
@@ -176,7 +126,7 @@ input:invalid:required {
     height: 10px;
     padding: 10px 10px 10px 10px;
     border-radius: 9px;
-    border: none;
+    border: 1px solid green;
 }
 
 label{
@@ -203,18 +153,14 @@ label{
     display: flex;
     justify-content: space-around;
 }
-.buttons{
-    display: flex;
-    gap: 5px;
-    justify-content: end;
-    margin-right: 20px;
-}
+
 
 .item{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 .item_name{
     margin: 0;
     font-family: 'Georgia', sans-serif;
@@ -245,22 +191,7 @@ input:invalid{
 
 }
 
-.button_complete{
-    font-family: 'Georgia', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 22.1px;
-    letter-spacing: 0.06em;
-    border-radius: 9px;
-    cursor: pointer;
-    background: #FFD25A;
-    color: #292929;
-    padding: 20px 40px 20px 40px;
-    border: none;
-    margin: auto;
-    margin-top: 10%;
-}
+
 
 .modal_complete{
     display: flex;

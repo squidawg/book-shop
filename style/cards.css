@@ -11,6 +11,7 @@
 
 
 }
+
 .card_inner{
     display: flex;
     flex-direction: column;
@@ -24,6 +25,37 @@
     gap: 10px;
 }
 
+.book_title{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #292929;
+    margin: 0;
+}
+
+.book_author{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    color: #545454;
+    margin: 0;
+
+}
+
+.book_price{
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    margin: 0;
+}
 
 .card_buttons {
     display: flex;

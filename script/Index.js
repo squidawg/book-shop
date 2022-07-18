@@ -1,4 +1,4 @@
-import {Modal} from './modal.js';
+import {ExpandBtnModal} from './ExpandBtnModal.js';
 import createElement from "./CreateElement.js";
 
 
@@ -7,8 +7,6 @@ import createElement from "./CreateElement.js";
 
 
     const HEADER = createElement('header', "header");
-
-
     const FOOTER = createElement('footer', 'footer');
 
 
@@ -26,8 +24,8 @@ import createElement from "./CreateElement.js";
     cart_title.innerText = 'Cart';
 
 
-    const BORDER_BOX = createElement('div', "border_box");
-    BORDER_BOX.id = 'border_box';
+    const BORDERED_BOX = createElement('div', "border_box");
+    BORDERED_BOX.id = 'border_box';
     const border_inner = createElement('div', "border_inner");
 
 
@@ -39,9 +37,9 @@ import createElement from "./CreateElement.js";
 
 
     border_inner.append(border_title, drag);
-    BORDER_BOX.append(border_inner);
+    BORDERED_BOX.append(border_inner);
     CART_WRAPPER.append(cart_title);
-    CART_INNER.append(BORDER_BOX);
+    CART_INNER.append(BORDERED_BOX);
     CART.append(CART_WRAPPER, CART_INNER);
     WRAPPER.append(SHELF, CART);
     BODY.append(HEADER, WRAPPER, FOOTER);
@@ -56,13 +54,12 @@ import createElement from "./CreateElement.js";
 
 
     const renderModalWindow = (content) => {
-        let modal = new Modal();
+        let modal = new ExpandBtnModal();
         modal.buildModal(content);
     };
     const generateToolsModal = (name, link, book_name, book_price, book_description) => {
         renderModalWindow(createModalContent(name, link, book_name, book_price, book_description));
     };
-
 
     const createModalContent = (name, link, book_name, book_price, book_description) => {
 
@@ -94,18 +91,6 @@ import createElement from "./CreateElement.js";
     };
 
 
-    function footer() {
-        const footer_inner = createElement('div', 'footer_inner');
-        const footer_link = createElement('a', 'footer_link');
-        footer_link.href = 'https://github.com/squidawg';
-        const footer_git = createElement('span', 'footer_git');
-        const footer_year = createElement('h2', 'footer_year');
-        footer_link.append(footer_git);
-        footer_year.innerText = '2022';
-        footer_inner.append(footer_link, footer_year);
-        FOOTER.append(footer_inner);
-
-    }
 
     function header() {
         const header_promo = createElement('img', "header_promo");
@@ -129,6 +114,18 @@ import createElement from "./CreateElement.js";
         header_wrapper.append(header_title, header_description, button_promo);
         header_inner.append(header_promo, header_wrapper);
         HEADER.append(header_inner);
+
+    }
+    function footer() {
+        const footer_inner = createElement('div', 'footer_inner');
+        const footer_link = createElement('a', 'footer_link');
+        footer_link.href = 'https://github.com/squidawg';
+        const footer_git = createElement('span', 'footer_git');
+        const footer_year = createElement('h2', 'footer_year');
+        footer_link.append(footer_git);
+        footer_year.innerText = '2022';
+        footer_inner.append(footer_link, footer_year);
+        FOOTER.append(footer_inner);
 
     }
 
@@ -176,7 +173,7 @@ import createElement from "./CreateElement.js";
         const btn = createElement("button", "button");
         btn.innerText = "Add to cart";
 
-        const expand = createElement('button', "button_expand");
+        const expand = createElement('button',  "button_expand");
         expand.addEventListener("click", () =>
             generateToolsModal(name, link, book_name, book_price, book_description));
 
