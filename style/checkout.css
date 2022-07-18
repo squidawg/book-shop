@@ -244,3 +244,59 @@ label{
 input:invalid{
 
 }
+
+.button_complete{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    border-radius: 9px;
+    cursor: pointer;
+    background: #FFD25A;
+    color: #292929;
+    padding: 20px 40px 20px 40px;
+    border: none;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.modal_complete{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.complete-modal{
+    width: 400px;
+    height: 400px;
+}
+
+.title_complete{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    color: #292929;
+    margin: 0;
+
+}
+.order_description{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.description_name, .description_date, .description_address{
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22.1px;
+    letter-spacing: 0.06em;
+    margin: 0;
+}

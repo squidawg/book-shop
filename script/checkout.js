@@ -3,6 +3,7 @@ import {NewModal} from "./NewModal.js";
 const cart_total = document.querySelector('.cart_total');
 let form = document.querySelector('form');
 const btn_submit = document.querySelector('.button_submit');
+const payment_wrapper = document.querySelector('.payment_wrapper');
 
 
 if(document.title === 'Checkout') {
@@ -57,8 +58,9 @@ if(document.title === 'Checkout') {
            });
 
         const renderModalWin = (content) => {
-            let modal = new NewModal('tools-modal');
+            let modal = new NewModal('complete-modal');
             modal.buildModal(content);
+            payment_wrapper.setAttribute("style","display:none;");
         };
 
         const generateModal = (formData) =>{
@@ -66,9 +68,6 @@ if(document.title === 'Checkout') {
         };
         // : to do
         const completeModalContent = (formData) => {
-            const wrapper__modal = createElement("div", 'wrapper-modal-content');
-            const wrapper__inner__modal = createElement("div", 'wrapper-modal-content__inner-modal');
-
             let fName = formData.get('firstName');
             let lName = formData.get('lastName');
             let date = formData.get('date');
@@ -76,9 +75,34 @@ if(document.title === 'Checkout') {
             let house = formData.get('house');
             let flatNumber = formData.get('flatNumber');
 
-            wrapper__inner__modal.append(fName, lName, date, streetName, house, flatNumber );
+            const wrapper__modal = createElement("div", 'modal_complete');
+            const description = createElement('div', 'order_description');
 
-            return wrapper__inner__modal;
+            const name = createElement('h3', 'description_name');
+            name.innerText = `Dear, ${fName} ${lName}!`;
+
+            const description_date = createElement('h3', 'description_date');
+            description_date.innerText = `Your order will be delivered on ${date}`;
+
+            const address = createElement('h3', 'description_address');
+            address.innerText = `at ${streetName} str. ${house} apt. ${flatNumber}`;
+
+            const title = createElement('h2', 'title_complete');
+            title.innerText = ' Your order is Confirmed!';
+
+            const closeButton = createElement('btn', 'button_complete');
+            const inner_button = createElement('p', 'button_text');
+            inner_button.innerText = 'Complete';
+            closeButton.addEventListener('click', () => {
+                location.href='index.html';
+            });
+
+
+            closeButton.append(inner_button);
+            description.append(name, description_date, address);
+            wrapper__modal.append(title, description, closeButton);
+
+            return wrapper__modal;
 
 
         };

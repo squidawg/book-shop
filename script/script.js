@@ -56,7 +56,7 @@ import createElement from "./CreateElement.js";
 
 
     const renderModalWindow = (content) => {
-        let modal = new Modal('tools-modal');
+        let modal = new Modal();
         modal.buildModal(content);
     };
     const generateToolsModal = (name, link, book_name, book_price, book_description) => {
