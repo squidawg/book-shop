@@ -2,7 +2,7 @@
     width: 24px;
     height: 24px;
     //color: #545454;
-    background-image: url("/icons/mark-github-24.svg");
+    background-image: url("../icons/mark_github.svg");
     display: inline-flex;
     background-repeat: no-repeat;
     background-position: center;

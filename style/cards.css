@@ -8,8 +8,6 @@
     padding: 10px;
     gap: 10px;
     cursor: grab;
-
-
 }
 
 .card_inner{
@@ -67,8 +65,4 @@
 .button_expand{
     width: 20px;
     height: 20px;
-    /*background-image: url("/icons/icon.svg");
-    border-radius: 100px;
-    background-position: center;
-    background-repeat: no-repeat;*/
 }

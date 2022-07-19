@@ -120,7 +120,7 @@ let arr = [];
                 }
                  sessionStorage.setItem('test', JSON.stringify(checkout_obj));
                  sessionStorage.setItem('total', total_sum);
-                 location.href = 'checkout.html';
+                 location.href = 'checkout-form.html';
 
             });
         };

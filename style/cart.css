@@ -34,7 +34,7 @@
     width: 120px;
     height: 120px;
     color: #545454;
-    background-image: url("/icons/drag-drop-svgrepo-com.svg");
+    background-image: url("../icons/drag_drop.svg");
     display: inline-flex;
     background-repeat: no-repeat;
     background-position: center;

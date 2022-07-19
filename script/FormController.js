@@ -11,10 +11,10 @@ if(document.title === 'Checkout') {
     let data = JSON.parse(sessionStorage.getItem('test'));
     let total = sessionStorage.getItem('total');
     window.addEventListener('load', () => {
-        const gift = document.querySelector('.gift');
+        const checkbox = document.querySelector('.gift');
         const cart_container = document.querySelector('.cart_container');
-        let i = 1;
 
+        let i = 1;
         Object.keys(data).forEach(element => {
             const item = createElement('div', 'item');
             const book_name = createElement('p', 'item_name');
@@ -25,19 +25,19 @@ if(document.title === 'Checkout') {
             cart_container.append(item);
             i++;
         });
+
         cart_total.append(total);
 
-        gift.addEventListener('click', function () {
-            let checks = document.querySelectorAll('input[type=checkbox]:checked');
-            let checked = document.querySelectorAll('input[type=checkbox]');
-            checked.forEach(function (element) {
-                if (checks.length === 2 && element.checked === false) {
+        checkbox.addEventListener('click', function () {
+            let checkedElements = document.querySelectorAll('input[type=checkbox]:checked');
+            let checkboxElements = document.querySelectorAll('input[type=checkbox]');
+            checkboxElements.forEach(function (element) {
+                if (checkedElements.length === 2 && element.checked === false) {
                     element.disabled = true;
                     element.required = true;
-                } else if (checks.length < 2) {
+                } else if (checkedElements.length < 2) {
                     element.disabled = false;
                 }
-
             });
         });
 
@@ -86,7 +86,7 @@ if(document.title === 'Checkout') {
             let lName = formData.get('lastName');
             let date = formData.get('date');
             let streetName = formData.get('street');
-            let house = formData.get('house');
+            let houseNumber = formData.get('house');
             let flatNumber = formData.get('flatNumber');
 
             const wrapper__modal = createElement("div", 'modal_complete');
@@ -99,7 +99,7 @@ if(document.title === 'Checkout') {
             description_date.innerText = `Your order will be delivered on ${date}`;
 
             const address = createElement('h3', 'description_address');
-            address.innerText = `at ${streetName} str. ${house} apt. ${flatNumber}`;
+            address.innerText = `at ${streetName} str. ${houseNumber} apt. ${flatNumber}`;
 
             const title = createElement('h2', 'title_complete');
             title.innerText = ' Your order is Confirmed!';
@@ -123,10 +123,4 @@ if(document.title === 'Checkout') {
 
 
     });
-}
-
-if(document.title === 'Complete') {
-    let result = formData.get('firstName');
-    const submit_info = document.getElementById('submit');
-    submit_info.append(result);
 }
