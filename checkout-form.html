@@ -19,13 +19,13 @@
             </div>
 
             <div class="cart_container"></div>
-            <div class="cart_total">Total: $</div>
+            <div class="cart_total"></div>
 
             <form   class="delivery" id="delivery" name="delivery">
                 <div class="text_form">
                     <div class="input_element">
                         <label for="input-name">Name</label>
-                        <input name="firstName" id="input-name" pattern="[A-Za-z]{4,}" required  aria-describedby="error" class="validate" autocomplete="off">
+                        <input name="firstName" id="input-name" pattern="[A-Za-z]{4,}" required   class="validate" autocomplete="off">
                         <span class="error">The field is invalid</span>
                     </div>
                     <div class="input_element">
@@ -35,12 +35,12 @@
                     </div>
                     <div class="input_element">
                         <label for="input-date">Date</label>
-                        <input name="date" type="date" id="input-date" min='' required class="validate" autocomplete="off">
+                        <input name="date" type="date" id="input-date"  required class="validate" autocomplete="off">
                         <span class="error">The field is invalid</span>
                     </div>
                     <div class="input_element">
                         <label for="input-street">Street</label>
-                        <input name="street" id="input-street" pattern="[A-Za-z]{5,}" required class="validate" autocomplete="off">
+                        <input name="street" id="input-street" pattern="[A-Za-z0-9' ']{5,}" required class="validate" autocomplete="off">
                         <span class="error">The field is invalid</span>
                     </div>
                     <div class="input_element">
@@ -50,7 +50,7 @@
                     </div>
                     <div class="input_element">
                         <label for="input-flat">Flat №</label>
-                        <input name="flatNumber" type="number" id="input-flat"   min="0"  required class="validate" autocomplete="off">
+                        <input name="flatNumber" pattern="[0-9]+|([0-9]+?[-]+?[0-9])" id="input-flat"    required class="validate" autocomplete="off">
                         <span class="error">The field is invalid</span>
                     </div>
                 </div>
@@ -85,8 +85,8 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <button class="button button_cancel" onclick="location.href='index.html'"><p class="button_text">Cancel</p></button>
-                    <button class="button button_submit" id="button_submit" disabled><p class="button_text" >Submit</p></button>
+                    <button class="button button_cancel" onclick="location.href='index.html'">Cancel</button>
+                    <button class="button button_submit" id="button_submit" disabled>Complete</button>
 
                 </div>
 

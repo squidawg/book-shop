@@ -1,7 +1,6 @@
 import createElement from "./CreateElement.js";
 import {ConfirmOrderModal} from "./ConfirmOrderModal.js";
 
-const cart_total = document.querySelector('.cart_total');
 let form = document.querySelector('form');
 const btn_submit = document.querySelector('.button_submit');
 const payment_wrapper = document.querySelector('.payment_wrapper');
@@ -13,7 +12,8 @@ if(document.title === 'Checkout') {
     window.addEventListener('load', () => {
         const checkbox = document.querySelector('.gift');
         const cart_container = document.querySelector('.cart_container');
-
+        const cart_total = document.querySelector('.cart_total');
+        const total_text = createElement('h4', 'total_text');
         let i = 1;
         Object.keys(data).forEach(element => {
             const item = createElement('div', 'item');
@@ -25,8 +25,8 @@ if(document.title === 'Checkout') {
             cart_container.append(item);
             i++;
         });
-
-        cart_total.append(total);
+        total_text.innerHTML = `Total: $${total}`;
+        cart_total.append(total_text);
 
         checkbox.addEventListener('click', function () {
             let checkedElements = document.querySelectorAll('input[type=checkbox]:checked');

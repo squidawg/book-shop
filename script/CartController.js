@@ -28,7 +28,7 @@ let arr = [];
                 currentCard = document.getElementById(this.closest('.card').id);
                 data = currentCard.cloneNode(true);
             });
-            element.childNodes[1].lastChild.addEventListener('click', function (){
+            element.childNodes[1].lastChild.addEventListener('click', function () {
                 addToCart(data)
             });
         });
@@ -39,6 +39,7 @@ let arr = [];
         card_id.forEach(function (element) {
             element.id = i;
             i++;
+
         });
 
         function dragStart() {
@@ -59,6 +60,12 @@ let arr = [];
             addToCart(cloneCurrentCard);
 
         }
+
+
+
+
+
+
 
         function cartTemplate(img, title, author, price, id) {
             const card = createElement('div', 'card');
@@ -106,7 +113,7 @@ let arr = [];
             checkoutButton.innerHTML = 'Checkout';
             totalCount.innerText += price;
 
-            innerWrapper.append(totalName, totalCount,);
+            innerWrapper.append(totalName, totalCount);
             totalWrapper.append(innerWrapper, checkoutButton);
             cart_inner.append(totalWrapper);
 
