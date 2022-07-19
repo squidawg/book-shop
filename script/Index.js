@@ -104,7 +104,8 @@ function header() {
 
     header_title.innerText = 'Book shop';
     header_description.innerText = 'Connecting readers with independent booksellers all over the world.';
-    header_promo_img.src = '/icons/book_logo.png';
+    header_promo_img.src = 'icons/bookLogo.png';
+    header_promo_img.alt = 'promo_image';
 
     header_wrapper.append(header_title, header_description, button_promo);
     wrapper.append(header_promo_img, header_wrapper);
