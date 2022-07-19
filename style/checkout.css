@@ -80,7 +80,7 @@
 .logo{
     width: 40px;
     height: 40px;
-    background-image: url("/icons/Credit_card_light.svg");
+    background-image: url("../icons/card_light.svg");
     display: inline-flex;
     border-radius: 100px;
     background-position: center;
