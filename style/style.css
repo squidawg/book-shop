@@ -1,0 +1,25 @@
+@import "shelf.css";
+@import "cards.css";
+@import "cart.css";
+@import "header.css";
+@import "footer.css";
+@import "modal.css";
+@import "drag.css";
+@import "buttons.css";
+@import "checkout.css";
+
+
+.body{
+    margin: 0;
+}
+
+.wrapper{
+    width: 1270px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+

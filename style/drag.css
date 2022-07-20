@@ -1,0 +1,9 @@
+.active{
+    border: dashed 5px #FFFFFF;
+}
+
+.drop_area{
+    justify-content: normal;
+    flex-direction: column;
+    gap: 20px;
+}
