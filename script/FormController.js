@@ -4,16 +4,19 @@ import {ConfirmOrderModal} from "./ConfirmOrderModal.js";
 let form = document.querySelector('form');
 const btn_submit = document.querySelector('.button_submit');
 const payment_wrapper = document.querySelector('.payment_wrapper');
+const checkbox = document.querySelector('.gift');
+const cart_container = document.querySelector('.cart_container');
+const cart_total = document.querySelector('.cart_total');
 
-
+//executes only if checkout.html is loaded
 if(document.title === 'Checkout') {
     let data = JSON.parse(sessionStorage.getItem('test'));
     let total = sessionStorage.getItem('total');
     window.addEventListener('load', () => {
-        const checkbox = document.querySelector('.gift');
-        const cart_container = document.querySelector('.cart_container');
-        const cart_total = document.querySelector('.cart_total');
+
         const total_text = createElement('h4', 'total_text');
+
+        //checkout-form parsing data obj to set items which will be bought
         let i = 1;
         Object.keys(data).forEach(element => {
             const item = createElement('div', 'item');
@@ -25,9 +28,12 @@ if(document.title === 'Checkout') {
             cart_container.append(item);
             i++;
         });
+
+        // checkout-form total price
         total_text.innerHTML = `Total: $${total}`;
         cart_total.append(total_text);
 
+        //checkout-form checkbox function allows only 2 optional choose from given 4.
         checkbox.addEventListener('click', function () {
             let checkedElements = document.querySelectorAll('input[type=checkbox]:checked');
             let checkboxElements = document.querySelectorAll('input[type=checkbox]');
@@ -41,12 +47,14 @@ if(document.title === 'Checkout') {
             });
         });
 
+        //checkout-form change date format from datepicker
         const today = new Date();
         const tomorrow = new Date();
         tomorrow.setDate(today.getDate() + 1);
         document.getElementById('input-date').setAttribute('min',
             tomorrow.toISOString().split('T')[0]);
 
+        // event listener for "invalid input" message
         const checkForm = document.getElementById('delivery');
         checkForm.addEventListener('change', ()=>{
             const check = document.querySelectorAll('.error');
@@ -59,12 +67,14 @@ if(document.title === 'Checkout') {
                  }
             });
         });
+
+        //check if all required fields are filled properly
         checkForm.addEventListener("change", () => {
             document.getElementById('button_submit').disabled = !checkForm.checkValidity();
 
         });
 
-
+        // pass valid form input  to generate  modal
         btn_submit.addEventListener('click',(e) => {
                e.preventDefault();
                let formData = new FormData(form);
@@ -80,7 +90,8 @@ if(document.title === 'Checkout') {
         const generateModal = (formData) =>{
             renderModalWin(completeModalContent(formData));
         };
-        // : to do
+
+
         const completeModalContent = (formData) => {
             let fName = formData.get('firstName');
             let lName = formData.get('lastName');
@@ -120,7 +131,5 @@ if(document.title === 'Checkout') {
 
 
         };
-
-
     });
 }
