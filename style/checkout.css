@@ -1,6 +1,7 @@
 .checkout_form{
     background-color: #FFD25A;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .total_wrapper{
@@ -116,6 +117,7 @@ input:invalid:required {
 .gift{
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .validate{
@@ -241,4 +243,10 @@ label{
     line-height: 22.1px;
     letter-spacing: 0.06em;
     margin: 0;
+}
+
+.payment_option {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
