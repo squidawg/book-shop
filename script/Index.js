@@ -1,6 +1,6 @@
 import {ExpandBtnModal} from './ExpandBtnModal.js';
 import createElement from "./CreateElement.js";
-
+import {initCart} from "./CartController.js";
 
 const WRAPPER = document.querySelector('.wrapper');
 const BODY = document.querySelector('body');
@@ -188,6 +188,7 @@ async function init() {
     generateCardAppend();
     header();
     footer();
+    initCart();
 }
 
 init();

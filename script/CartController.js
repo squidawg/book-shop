@@ -1,16 +1,15 @@
 import createElement from "./CreateElement.js";
 
 
-const bordered_box = document.querySelector('.border_box');
-const box_inner = document.querySelector('.border_inner');
-const cart_inner = document.querySelector('.cart_inner');
-
-let currentCard = '';
-let totalCart = 0;
-let arr = [];
-
     //is it the right way to await cards beign loaded and then do something else
-    window.onload = () => {
+    export function initCart(){
+        const bordered_box = document.querySelector('.border_box');
+        const box_inner = document.querySelector('.border_inner');
+        const cart_inner = document.querySelector('.cart_inner');
+
+        let currentCard = '';
+        let totalCart = 0;
+        let arr = [];
         const cards = document.querySelectorAll('.card');
         bordered_box.addEventListener('dragover', dragOver);
         bordered_box.addEventListener('drop', dragDrop);
