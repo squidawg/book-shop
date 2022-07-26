@@ -4,23 +4,18 @@ import createElement from "./CreateElement.js";
 const bordered_box = document.querySelector('.border_box');
 const box_inner = document.querySelector('.border_inner');
 const cart_inner = document.querySelector('.cart_inner');
-// const shelf_inner = document.querySelector('.shelf');
-// const delivery_info = document.querySelector('.cart_container');
-// const cart = document.querySelector('.cart');
-
 
 let currentCard = '';
 let totalCart = 0;
 let arr = [];
 
     //is it the right way to await cards beign loaded and then do something else
-    window.addEventListener('load', () => {
+    window.onload = () => {
         const cards = document.querySelectorAll('.card');
         bordered_box.addEventListener('dragover', dragOver);
         bordered_box.addEventListener('drop', dragDrop);
         let i = 1;
         cards.forEach(function (element) {
-            console.log(element.id)
             element.id = i;
             i++;
             element.addEventListener('dragstart', dragStart);
@@ -113,7 +108,7 @@ let arr = [];
                  sessionStorage.setItem('total', total_sum);
                  location.href = 'checkout-form.html';
             });
-        };
+        }
 
         function updateCartPrice(price) {
             let total = document.querySelector('.total_count');
@@ -122,8 +117,8 @@ let arr = [];
                 total.closest('.total_wrapper').remove();
 
             }
-            ;
-        };
+
+        }
 
         function addToCart(element) {
             let id = element.id;
@@ -146,7 +141,7 @@ let arr = [];
             }
         }
 
-    });
+    };
 
 
 
