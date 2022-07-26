@@ -1,5 +1,5 @@
 .checkout_form{
-    background-color: #FFD25A;
+    background-color: var(--main-bg-color);
     background-size: cover;
     overflow-x: hidden;
 }
@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 20px 10px 20px;
-    background-color: #FFD25A;
+    background-color: var(--main-bg-color);
     border-radius: 9px;
 }
 
@@ -22,7 +22,7 @@
     font-size: 17px;
     line-height: 22.1px;
     letter-spacing: 0.06em;
-    color: #292929;
+    color: var(--text-color-black);
     margin-right: 5px;
 }
 
@@ -45,14 +45,10 @@
     padding: 4px;
 }
 
-.checkout{
-    background-color: #F9D876;
-    margin-top: 30%;
-}
 
 .payment_wrapper{
     width: 630px;
-    background-color: #F6F6F6;
+    background-color: var(--card-bg);
     border-radius: 9px;
     margin-top: 20%;
 }
@@ -89,7 +85,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: white;
+    background: var(--white-color);
     border-radius: 9px;
     padding: 20px;
     max-height: 200px;
@@ -102,7 +98,7 @@
 }
 
 input:invalid:required {
-    border: 1px solid #FF785A;
+    border: 1px solid var(--btn-promo-hover-bg);
 }
 
 
@@ -211,7 +207,7 @@ label{
     font-size: 26px;
     line-height: 22.1px;
     letter-spacing: 0.06em;
-    color: #292929;
+    color: var(--text-color-black);
     margin: 0;
 
 }
@@ -237,7 +233,7 @@ label{
 .error{
     font-family: 'Georgia', sans-serif;
     font-style: normal;
-    color: #FF785A;
+    color: var(--btn-promo-hover-bg);
     font-weight: 400;
     font-size: 11px;
     line-height: 22.1px;

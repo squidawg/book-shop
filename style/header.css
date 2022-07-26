@@ -1,5 +1,5 @@
 .header{
-    background-color: #FFD25A;;
+    background-color: var(--main-bg-color);
     background-size: cover;
     gap: 154px;
     height: 1023px;

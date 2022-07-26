@@ -4,7 +4,7 @@
 }
 
 .cart_inner{
-    background: #F6F6F6;
+    background: var(--card-bg);
     width: 450px;
     margin-top: 20px;
     border-radius: 9px;
@@ -18,12 +18,12 @@
     font-size: 35px;
     line-height: 45.5px;
     letter-spacing: 0.06em;
-    color: #545454;
+    color: var(--title-color);
 }
 
 .border_box{
     margin: 20px;
-    border: dashed 5px #C4C4C4;
+    border: dashed 5px var(--border-dashed);
     display: flex;
     justify-content: center;
     max-height: 768px;
@@ -34,13 +34,13 @@
 .drag-n-drop{
     width: 120px;
     height: 120px;
-    color: #545454;
+    color: var(--title-color);
     background-image: url("../icons/drag_drop.svg");
     display: inline-flex;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 50%;
-    fill: #C4C4C4;
+    fill: var(--border-dashed);
 
 }
 
@@ -60,5 +60,5 @@
     font-size: 32px;
     line-height: 17px;
     letter-spacing: 0.06em;
-    color: #545454;
+    color: var(--title-color);
 }

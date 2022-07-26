@@ -18,7 +18,7 @@
 .modal {
     margin-top: 52px;
     border-radius: 9px;
-    background-color: #FAFAFA;
+    background-color: var(--white-bg);
     width: 900px;
     height: 500px;
     overflow: auto;
@@ -51,7 +51,7 @@
     font-size: 35px;
     line-height: 130%;
     letter-spacing: 0.06em;
-    color: #292929;
+    color: var(--text-color-black);
 }
 
 .modal__author{
@@ -61,7 +61,7 @@
     font-size: 20px;
     line-height: 115%;
     letter-spacing: 0.06em;
-    color: #545454;
+    color: var(--title-color);
 }
 
 .modal__description{
@@ -82,7 +82,7 @@
     height: 45px;
     border-radius: 100%;
     border: 2px solid;
-    border-color: #F9D876;
+    border-color: var(--btn-main-hover-bg);
     background-color: transparent;
     box-sizing: border-box;
     cursor: pointer;

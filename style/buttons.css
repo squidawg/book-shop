@@ -7,8 +7,8 @@
     letter-spacing: 0.06em;
     border-radius: 9px;
     cursor: pointer;
-    background: #FFD25A;
-    color: #292929;
+    background: var(--main-bg-color);
+    color: var(--text-color-black);
     padding: 5px 10px 5px 10px;
     border: none;
 }
@@ -18,18 +18,18 @@
 }
 
 button.button_submit:hover{
-    background: #FFAA5A;
+    background: var(--btn-main-hover-bg);
     transition: all .3s ease-out;
 }
 
 button.button_submit:disabled{
-    background: #FF785A;
+    background: var(--btn-promo-hover-bg);
     opacity: 0.5;
     cursor: default;
 }
 
 button.button_cancel:hover{
-    background: #FFAA5A;
+    background: var(--btn-main-hover-bg);
     transition: all .3s ease-out;
 }
 
@@ -42,7 +42,7 @@ button.button_cancel:hover{
 }
 
 button.button:hover{
-    background: #FF785A;
+    background: var(--btn-promo-hover-bg);
     transition: all .3s ease-out;
 }
 
@@ -52,12 +52,12 @@ button.button:hover{
     background-image: url("../icons/Icon.svg");
     background-repeat: no-repeat;
     background-position: center;
-    color: #292929;
+    color: var(--text-color-black);
     border: none;
 }
 
 button.button_expand:hover{
-    background: #FF785A;
+    background: var(--btn-promo-hover-bg);
     transition: all .3s ease-out;
     background-image: url("../icons/Icon.svg");
     background-repeat: no-repeat;
@@ -82,9 +82,9 @@ button.button_expand:hover{
 }
 
 button.button_promo:hover{
-    background: #FF785A;
+    background: var(--btn-promo-hover-bg);
     transition: all .2s ease-out;
-    border: 3px solid #FF785A;
+    border: 3px solid var(--btn-promo-hover-bg);
 }
 
 
@@ -98,7 +98,7 @@ button.button_promo:hover{
     padding: 15px;
     border-radius: 100px;
     cursor: pointer;
-    color: #292929;
+    color: var(--text-color-black);
     border: none;
     transform: rotate(45deg);
     background-image: url("../icons/Icon.svg");
@@ -109,7 +109,7 @@ button.button_promo:hover{
 }
 
 button.button_remove:hover{
-    background: #FF785A;
+    background: var(--btn-promo-hover-bg);
     transition: all .3s ease-out;
     background-image: url("../icons/Icon.svg");
     background-repeat: no-repeat;
@@ -124,6 +124,6 @@ button.button_remove:hover{
 }
 
 button.button_complete:hover{
-    background: #FFAA5A;
+    background: var(--btn-main-hover-bg);
     transition: all .3s ease-out;
 }

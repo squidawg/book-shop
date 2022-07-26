@@ -22,4 +22,16 @@
 
 }
 
+:root{
+    --main-bg-color: #FFD25A;
+    --text-color-black: #292929;
+    --btn-main-hover-bg: #FFAA5A;
+    --btn-promo-hover-bg: #FF785A;
+    --title-color: #545454;
+    --white-bg: #FAFAFA;
+    --footer-bg: #FBE39D;
+    --card-bg: #F6F6F6;
+    --white-color: #FFFFFF;
+    --border-dashed: #C4C4C4;
 
+}

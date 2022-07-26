@@ -4,9 +4,9 @@ import createElement from "./CreateElement.js";
 const bordered_box = document.querySelector('.border_box');
 const box_inner = document.querySelector('.border_inner');
 const cart_inner = document.querySelector('.cart_inner');
-const shelf_inner = document.querySelector('.shelf');
-const delivery_info = document.querySelector('.cart_container');
-const cart = document.querySelector('.cart');
+// const shelf_inner = document.querySelector('.shelf');
+// const delivery_info = document.querySelector('.cart_container');
+// const cart = document.querySelector('.cart');
 
 
 let currentCard = '';
