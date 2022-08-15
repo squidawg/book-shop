@@ -8,6 +8,8 @@
     width: 450px;
     margin-top: 20px;
     border-radius: 9px;
+    position: sticky;
+    top: 1rem;
 }
 
 .cart_title{

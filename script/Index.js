@@ -2,7 +2,7 @@ import createElement from "./CreateElement.js";
 import {header, footer} from "./CreateContent.js";
 import {init} from './readJSON.js'
 
-const PROJECT_WRAPPER = document.querySelector('.project-wrapper');
+const OVERFLOW_WRAPPER = document.querySelector('.overflow-wrapper');
 const WRAPPER = document.querySelector('.wrapper');
 export const HEADER = createElement('header', "header");
 export const FOOTER = createElement('footer', 'footer');
@@ -35,7 +35,7 @@ CART_INNER.append(BORDERED_BOX);
 CART.append(CART_WRAPPER, CART_INNER);
 
 WRAPPER.append(SHELF, CART);
-PROJECT_WRAPPER.append(HEADER, WRAPPER, FOOTER);
+OVERFLOW_WRAPPER.append(HEADER, WRAPPER, FOOTER);
 
 
 init();

@@ -9,12 +9,10 @@
     align-items: center;
     justify-content: center;
 }
-
 .modal_wrapper {
     position: relative;
     overflow: auto;
 }
-
 .modal {
     margin-top: 52px;
     border-radius: 9px;
@@ -25,25 +23,21 @@
     overflow-x: hidden;
 
 }
-
 .wrapper-modal-content {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
-
 .modal-content__image{
     width: 381px;
     height: 500px;
 }
-
 .wrapper-modal-content__inner-modal{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 15px;
 }
-
 .modal__title{
     font-family: 'Georgia', sans-serif;
     font-style: normal;
@@ -53,7 +47,6 @@
     letter-spacing: 0.06em;
     color: var(--text-color-black);
 }
-
 .modal__author{
     font-family: 'Georgia', sans-serif;
     font-style: normal;
