@@ -7,16 +7,16 @@ const payment_wrapper = document.querySelector('.payment_wrapper');
 const checkbox = document.querySelector('.gift');
 const cart_container = document.querySelector('.cart_container');
 const cart_total = document.querySelector('.cart_total');
-
 //executes only if checkout.html is loaded
+//
 if(document.title === 'Checkout') {
     let data = JSON.parse(sessionStorage.getItem('test'));
     let total = sessionStorage.getItem('total');
     window.addEventListener('load', () => {
 
         const total_text = createElement('h4', 'total_text');
-
         //checkout-form parsing data obj to set items which will be bought
+        //
         let i = 1;
         Object.keys(data).forEach(element => {
             const item = createElement('div', 'item');
@@ -28,12 +28,12 @@ if(document.title === 'Checkout') {
             cart_container.append(item);
             i++;
         });
-
         // checkout-form total price
+        //
         total_text.innerHTML = `Total: $${total}`;
         cart_total.append(total_text);
-
         //checkout-form checkbox function allows only 2 optional choose from given 4.
+        //
         checkbox.addEventListener('click', function () {
             let checkedElements = document.querySelectorAll('input[type=checkbox]:checked');
             let checkboxElements = document.querySelectorAll('input[type=checkbox]');
@@ -46,34 +46,31 @@ if(document.title === 'Checkout') {
                 }
             });
         });
-
         //checkout-form change date format from datepicker
+        //
         const today = new Date();
         const tomorrow = new Date();
         tomorrow.setDate(today.getDate() + 1);
         document.getElementById('input-date').setAttribute('min',
             tomorrow.toISOString().split('T')[0]);
-
         // event listener for "invalid input" message
+        //
         const checkForm = document.getElementById('delivery');
         checkForm.addEventListener('change', ()=>{
             const check = document.querySelectorAll('.error');
             check.forEach(function (element) {
                  if(element.previousElementSibling.checkValidity()){
-                     element.style.display = 'none';
+                     element.style.visibility = 'hidden';
                  }
                  else {
-                     element.style.display = 'block';
+                     element.style.visibility = 'initial';
                  }
             });
         });
-
         //check if all required fields are filled properly
         checkForm.addEventListener("change", () => {
             document.getElementById('button_submit').disabled = !checkForm.checkValidity();
-
         });
-
         // pass valid form input  to generate  modal
         btn_submit.addEventListener('click',(e) => {
                e.preventDefault();
@@ -122,14 +119,11 @@ if(document.title === 'Checkout') {
                 location.href='index.html';
             });
 
-
             closeButton.append(inner_button);
             description.append(name, description_date, address);
             wrapper__modal.append(title, description, closeButton);
 
             return wrapper__modal;
-
-
         };
     });
 }

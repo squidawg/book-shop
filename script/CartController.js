@@ -1,7 +1,5 @@
 import createElement from "./CreateElement.js";
 
-
-    //is it the right way to await cards beign loaded and then do something else
     export function initCart(){
         const bordered_box = document.querySelector('.border_box');
         const box_inner = document.querySelector('.border_inner');
@@ -30,18 +28,15 @@ import createElement from "./CreateElement.js";
                 bordered_box.className += ' active';
             }
             currentCard = this;
-
         }
 
         function dragOver(e) {
             e.preventDefault();
-
         }
 
         function dragDrop() {
             let cloneCurrentCard = currentCard.cloneNode(true);
             addToCart(cloneCurrentCard);
-
         }
 
         function cartTemplate(img, title, author, price, id) {
@@ -62,7 +57,6 @@ import createElement from "./CreateElement.js";
                 if (bordered_box.childNodes.length === 1) {
                     bordered_box.className = 'border_box';
                     box_inner.style.display = "flex";
-
                 }
             });
 
@@ -114,9 +108,7 @@ import createElement from "./CreateElement.js";
             total.innerHTML = price;
             if (total.innerHTML < 1) {
                 total.closest('.total_wrapper').remove();
-
             }
-
         }
 
         function addToCart(element) {
@@ -139,9 +131,4 @@ import createElement from "./CreateElement.js";
                 updateCartPrice(totalCart);
             }
         }
-
-    };
-
-
-
-
+    }

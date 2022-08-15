@@ -5,7 +5,7 @@
     height: 1023px;
 }
 
-.header_promo_img{
+.header-promo-img{
     width: 260px;
     height: 260px;
     margin-top: 316px;
@@ -13,7 +13,7 @@
 
 }
 
-.header_wrapper{
+.header-wrapper{
     margin-top: 320px;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
     gap: 3px;
 }
 
-.header_title{
+.header-title{
     font-family: 'Georgia', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -31,7 +31,7 @@
     margin-bottom: 45px;
 }
 
-.header_description{
+.header-description{
     font-family: 'Georgia', sans-serif;
     font-style: normal;
     font-weight: 400;
