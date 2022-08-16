@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
 }
-
 .cart_inner{
     background: var(--card-bg);
     width: 450px;
@@ -11,7 +10,6 @@
     position: sticky;
     top: 1rem;
 }
-
 .cart_title{
     text-align: center;
     font-family: 'Georgia', sans-serif;
@@ -22,7 +20,6 @@
     letter-spacing: 0.06em;
     color: var(--title-color);
 }
-
 .border_box{
     margin: 20px;
     border: dashed 5px var(--border-dashed);
@@ -32,7 +29,6 @@
     overflow: scroll;
 
 }
-
 .drag-n-drop{
     width: 120px;
     height: 120px;
@@ -45,7 +41,6 @@
     fill: var(--border-dashed);
 
 }
-
 .border_inner{
     display: flex;
     flex-direction: column;
@@ -53,7 +48,6 @@
     align-items: center;
     height: 1150px;
 }
-
 .border_title{
     margin: 0;
     font-family: 'Georgia', sans-serif;

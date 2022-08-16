@@ -64,7 +64,5 @@ export class ExpandBtnModal {
         if (classes.contains('overlay') || classes.contains('modal_close') || classes.contains('modal__close-icon')){
             document.querySelector('.overlay').remove();
         }
-
-
     }
 }

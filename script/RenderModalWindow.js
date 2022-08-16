@@ -16,17 +16,17 @@ export const createModalContent = (...elements) => {
     const header = createElement('div', 'modal__header');
 
     const img = document.createElement("img");
-    img.src = elements[1]
+    img.src = elements[1];
     img.classList.add("modal-content__image");
 
     const title = createElement("h2", 'modal__title');
-    title.innerText = elements[2]
+    title.innerText = elements[2];
     const author = createElement('h3', 'modal__author');
-    author.innerText = elements[0]
+    author.innerText = elements[0];
     const description = createElement("p", 'modal__description');
-    description.innerText = elements[4]
+    description.innerText = elements[4];
     const price = createElement('h2', 'modal-content__price');
-    price.innerText = elements[3]
+    price.innerText = elements[3];
 
     header.append(title, author);
     wrapper__inner__modal.append(header, description);

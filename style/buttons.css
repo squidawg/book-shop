@@ -12,27 +12,22 @@
     padding: 5px 10px 5px 10px;
     border: none;
 }
-
 .button_text{
     margin: 0;
 }
-
 button.button_submit:hover{
     background: var(--btn-main-hover-bg);
     transition: all .3s ease-out;
 }
-
 button.button_submit:disabled{
     background: var(--btn-promo-hover-bg);
     opacity: 0.5;
     cursor: default;
 }
-
 button.button_cancel:hover{
     background: var(--btn-main-hover-bg);
     transition: all .3s ease-out;
 }
-
 .buttons{
     display: flex;
     gap: 5px;
@@ -40,12 +35,10 @@ button.button_cancel:hover{
     margin-right: 20px;
     margin-bottom: 20px;
 }
-
 button.button:hover{
     background: var(--btn-promo-hover-bg);
     transition: all .3s ease-out;
 }
-
 .button_expand{
     border-radius: 100px;
     padding: 15px;
@@ -55,7 +48,6 @@ button.button:hover{
     color: var(--text-color-black);
     border: none;
 }
-
 button.button_expand:hover{
     background: var(--btn-promo-hover-bg);
     transition: all .3s ease-out;
@@ -63,7 +55,6 @@ button.button_expand:hover{
     background-repeat: no-repeat;
     background-position: center;
 }
-
 .button_promo{
     font-family: 'Georgia', sans-serif;
     font-style: normal;
@@ -80,14 +71,11 @@ button.button_expand:hover{
     margin-top: 20px;
     margin-left: 10px;
 }
-
 button.button_promo:hover{
     background: var(--btn-promo-hover-bg);
     transition: all .2s ease-out;
     border: 3px solid var(--btn-promo-hover-bg);
 }
-
-
 .button_remove{
     font-family: 'Georgia', sans-serif;
     font-style: normal;
@@ -107,7 +95,6 @@ button.button_promo:hover{
     width: 20px;
     height: 20px;
 }
-
 button.button_remove:hover{
     background: var(--btn-promo-hover-bg);
     transition: all .3s ease-out;
@@ -115,14 +102,12 @@ button.button_remove:hover{
     background-repeat: no-repeat;
     background-position: center;
 }
-
 .button_complete{
     font-size: 24px;
     padding: 20px 40px 20px 40px;
     margin: auto;
     margin-top: 10%;
 }
-
 button.button_complete:hover{
     background: var(--btn-main-hover-bg);
     transition: all .3s ease-out;

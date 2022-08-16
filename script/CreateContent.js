@@ -18,6 +18,7 @@ export function header() {
             behavior: 'smooth'
         });
     });
+
     header_title.innerText = 'Book shop';
     header_description.innerText = 'Connecting readers with independent booksellers all over the world.';
     header_promo_img.src = '../icons/bookLogo.png';

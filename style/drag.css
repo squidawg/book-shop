@@ -1,7 +1,6 @@
 .active{
     border: dashed 5px var(--white-color);
 }
-
 .drop_area{
     justify-content: normal;
     flex-direction: column;
