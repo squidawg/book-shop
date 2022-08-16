@@ -1,3 +1,4 @@
+import createElement from "./CreateElement.js";
 export class ExpandBtnModal {
     constructor(classes) {
         this.classes = classes;
@@ -10,15 +11,15 @@ export class ExpandBtnModal {
     }
 
      buildModal(content) {
-        this.overlay = this.createDomNode(this.overlay, 'div', 'overlay');
+        this.overlay = createElement('div', 'overlay');
 
-        this.modalWrapper = this.createDomNode(this.modalWrapper, 'div', 'modal_wrapper');
-        this.modal = this.createDomNode(this.modal, 'div', 'modal', this.classes);
+        this.modalWrapper = createElement('div', 'modal_wrapper');
+        this.modal = createElement('div', 'modal', this.classes);
 
-        this.modalCloseBtn = this.createDomNode(this.modalCloseBtn, 'button', 'modal_close');
-        this.CloseBtnInner = this.createDomNode(this.modalCloseBtn, 'span', "modal__close-icon");
+        this.modalCloseBtn = createElement( 'button', 'modal_close');
+        this.CloseBtnInner = createElement('span', "modal__close-icon");
 
-        this.modalContent = this.createDomNode(this.modalContent, 'div', 'modal_content');
+        this.modalContent = createElement('div', 'modal_content');
 
         this.setContent(content);
 
@@ -27,12 +28,6 @@ export class ExpandBtnModal {
         this.bindEvents();
 
         this.openModal();
-    }
-
-    createDomNode(node, element, ...classes) {
-        node = document.createElement(element);
-        node.classList.add(...classes);
-        return node;
     }
 
     setContent(content) {

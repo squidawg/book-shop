@@ -1,16 +1,13 @@
 import createElement from "./CreateElement.js";
 import {ExpandBtnModal} from "./ExpandBtnModal.js";
 
-export const renderModalWindow = (content) => {
-    let modal = new ExpandBtnModal();
-    modal.buildModal(content);
-};
 
 export const generateToolsModal = (...elements) => {
-    renderModalWindow(createModalContent(...elements));
+    createModalContent(...elements);
 };
 
 export const createModalContent = (...elements) => {
+    const modal = new ExpandBtnModal();
     const wrapper__modal = createElement("div", 'wrapper-modal-content');
     const wrapper__inner__modal = createElement("div", 'wrapper-modal-content__inner-modal');
     const header = createElement('div', 'modal__header');
@@ -32,5 +29,5 @@ export const createModalContent = (...elements) => {
     wrapper__inner__modal.append(header, description);
     wrapper__modal.append(img, wrapper__inner__modal);
 
-    return wrapper__modal;
+    modal.buildModal(wrapper__modal);
 };

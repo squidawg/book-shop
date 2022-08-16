@@ -77,17 +77,12 @@ window.addEventListener('load', () => {
         generateModal(formData);
     });
 
-    const renderModalWin = (content) => {
-        let modal = new ConfirmOrderModal('complete-modal');
-        modal.buildModal(content);
-        payment_wrapper.setAttribute("style","display:none;");
-    };
-
     const generateModal = (formData) =>{
-        renderModalWin(completeModalContent(formData));
+        completeModalContent(formData);
     };
 
     const completeModalContent = (formData) => {
+        const modal = new ConfirmOrderModal('complete-modal');
         const fName = formData.get('firstName');
         const lName = formData.get('lastName');
         const date = formData.get('date');
@@ -121,7 +116,8 @@ window.addEventListener('load', () => {
         description.append(name, description_date, address);
         wrapper__modal.append(title, description, closeButton);
 
-        return wrapper__modal;
+        modal.buildModal(wrapper__modal);
+        payment_wrapper.setAttribute("style","display:none;");
     };
 });
 
