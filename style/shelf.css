@@ -1,0 +1,36 @@
+.shelf{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    justify-content: center;
+
+}
+
+.shelf_inner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 30px;
+    margin: 20px 0 20px 0;
+
+}
+
+.shelf_title{
+    text-align: center;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45.5px;
+    letter-spacing: 0.06em;
+    color: var(--title-color);
+}
+
+.book_card{
+    width: 205px;
+    height: 231px;
+}
+
+.book_image{
+    width: 129px;
+    height: 190px;
+}
